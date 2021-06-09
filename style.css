@@ -1,0 +1,908 @@
+body{
+  margin: 0;
+  background-color: #1A1A1A;
+}
+
+@font-face {
+  font-family: 'grizzlies';
+  src: url("fonts/grizzlies.ttf");
+}
+@font-face {
+  font-family: 'jazz';
+  src: url("fonts/jazz.ttf");
+}
+@font-face {
+  font-family: 'clippers';
+  src: url("fonts/clippers.ttf");
+}
+
+@font-face {
+  font-family: 'mavericks';
+  src: url("fonts/mavericks.ttf");
+}
+
+@font-face {
+  font-family: 'nuggets';
+  src: url("fonts/nuggets.ttf");
+}
+
+@font-face {
+  font-family: 'blazers';
+  src: url("fonts/blazers.ttf");
+}
+
+@font-face {
+  font-family: 'suns';
+  src: url("fonts/suns.ttf");
+}
+
+@font-face {
+  font-family: 'lakers';
+  src: url("fonts/lakers.ttf");
+}
+
+@font-face {
+  font-family: 'sixers';
+  src: url("fonts/sixers.ttf");
+}
+
+@font-face {
+  font-family: 'wizards';
+  src: url("fonts/wizards.ttf");
+}
+@font-face {
+  font-family: 'knicks';
+  src: url("fonts/knicks.ttf");
+}
+@font-face {
+  font-family: 'hawks';
+  src: url("fonts/hawks.ttf");
+}
+@font-face {
+  font-family: 'bucks';
+  src: url("fonts/bucks.ttf");
+}
+@font-face {
+  font-family: 'heat';
+  src: url("fonts/heat.ttf");
+}
+@font-face {
+  font-family: 'nets';
+  src: url("fonts/nets.ttf");
+}
+@font-face {
+  font-family: 'celtics';
+  src: url("fonts/celtics.ttf");
+}
+
+#main {
+  background-image: url("bracket_finals.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  overflow: hidden;
+  width: 1000px;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  /*border: 1px solid red;*/
+}
+
+#container {
+  
+}
+
+.fill {
+  position: relative;
+  height: 49px;
+  width: 124px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: white;
+}
+
+.hold {
+  /*border: solid 5px #ccc;*/
+  background-color: white;
+}
+
+.empty {
+  /*display: inline-block;*/
+  height: 49px;
+  width: 124px;
+  border: solid 1px black;
+  background: white;
+  border-radius: 8px;
+  color: white;
+}
+
+.hovered {
+  background: #bfbfbf;
+  border-style: dashed;
+}
+
+.westseed, .eastseed{
+  font-family: 'Helvetica';
+  font-size: 12px;
+  font-weight: normal;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  line-height: 4.3em;
+  border-radius: 6px 0 0 6px;
+}
+
+/********* CHAMPS TEXTE POUR SCORES *********/
+
+/*semi conf west*/
+#num_semiconf_west_1 {
+  position: absolute;
+  top: 172px;
+  left: 230px;
+  z-index: 10
+}
+
+#num_semiconf_west_2 {
+  position: absolute;
+  top: 238px;
+  left: 230px;
+  z-index: 10
+}
+
+#num_semiconf_west_3 {
+  position: absolute;
+  top: 476px;
+  left: 230px;
+  z-index: 10
+}
+
+#num_semiconf_west_4 {
+  position: absolute;
+  top: 540px;
+  left: 230px;
+  z-index: 10
+}
+
+/*final conf west*/
+#num_finalconf_west_1 {
+  position: absolute;
+  top: 244px;
+  left: 360px;
+  z-index: 10
+}
+
+#num_finalconf_west_2 {
+  position: absolute;
+  top: 464px;
+  left: 360px;
+  z-index: 10
+}
+
+/*finals*/
+#num_finals_1{
+  position: absolute;
+  top: 290px;
+  left: 570px;
+  z-index: 10
+}
+
+#num_finals_2{
+  position: absolute;
+  top: 425px;
+  left: 414px;
+  z-index: 10
+}
+
+/*final conf east*/
+#num_finalconf_east_1 {
+  position: absolute;
+  top: 244px;
+  right: 360px;
+  z-index: 10
+}
+
+#num_finalconf_east_2 {
+  position: absolute;
+  top: 464px;
+  right: 360px;
+  z-index: 10
+}
+
+/*semi conf east*/
+#num_semiconf_east_1 {
+  position: absolute;
+  top: 172px;
+  right: 230px;
+  z-index: 10
+}
+
+#num_semiconf_east_2 {
+  position: absolute;
+  top: 238px;
+  right: 230px;
+  z-index: 10
+}
+
+#num_semiconf_east_3 {
+  position: absolute;
+  top: 476px;
+  right: 230px;
+  z-index: 10
+}
+
+#num_semiconf_east_4 {
+  position: absolute;
+  top: 540px;
+  right: 230px;
+  z-index: 10
+}
+
+#empty1 {
+  position: absolute;
+  top: 112px;
+  left: 201px;
+}
+#empty2 {
+  position: absolute;
+  top: 264px;
+  left: 201px;
+}
+#empty3 {
+  position: absolute;
+  top: 417px;
+  left: 201px;
+}
+#empty4 {
+  position: absolute;
+  top: 565px;
+  left: 201px;
+}
+#empty5 {
+  position: absolute;
+  top: 185px;
+  left: 325px;
+}
+#empty6 {
+  position: absolute;
+  top: 489px;
+  left: 325px;
+}
+#empty7 {
+  position: absolute;
+  top: 274px;
+  left: 437px;
+}
+#empty8 {
+  position: absolute;
+  top: 407px;
+  left: 437px;
+}
+#empty9 {
+  position: absolute;
+  top: 188px;
+  left: 551px;
+}
+#empty10 {
+  position: absolute;
+  top: 489px;
+  left: 551px;
+}
+#empty11 {
+  position: absolute;
+  top: 112px;
+  left: 675px;
+}
+#empty12 {
+  position: absolute;
+  top: 264px;
+  left: 675px;
+}
+#empty13 {
+  position: absolute;
+  top: 417px;
+  left: 675px;
+}
+#empty14 {
+  position: absolute;
+  top: 565px;
+  left: 675px;
+}
+
+/***************************************************/
+
+input {
+  width: 12px;
+  height: 15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 2px;
+  background-color: #383838;
+  color: white;
+  font-family: 'Helvetica';
+}
+
+input[pattern]:invalid{
+  color: red;
+}
+
+input[pattern]:invalid:focus{
+  border: 2px solid red;
+}
+
+input:focus{
+    outline: none;
+}
+
+/***************************************************/
+
+#bloc_westteam1 { /*UTAH*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #002B5C; /* green :#00471B / yellow : #F9A01B */
+  z-index: 100;
+  border-radius: 6px;
+}
+
+#westseed1 {
+  background-color: #F9A01B;
+}
+
+#westteam_name1 {
+  font-size: 20px;
+  font-family: 'jazz';
+  color: #F9A01B;
+}
+
+#absolute1 {
+  position: absolute;
+  top: 82px;
+  left: 48px;
+}
+
+#num_west_1 {
+  position: absolute;
+  top: 97px;
+  left: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_westteam8 { /*GRIZZLIES*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #5D76A9; /* green :#00471B / yellow : #F9A01B */
+  z-index: 100;
+  border-radius: 6px;
+  /*border: 1px solid #1A1A1A;*/
+}
+
+#westseed8 {
+  background-color: #12173F;
+}
+
+#westteam_name8 {
+  font-size: 20px;
+  font-family: 'grizzlies';
+  color: #12173F;
+} 
+
+#absolute8 {
+  position: absolute;
+  top: 141px;
+  left: 48px;
+}
+
+#num_west_8 {
+  position: absolute;
+  top: 156px;
+  left: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_westteam4 { /*CLIPPERS*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #1D428A;/*#C8102E;*/ /* green :#00471B / yellow : #F9A01B */
+  z-index: 100;
+  border-radius: 6px;
+  /*border: 1px solid #1A1A1A;*/
+}
+
+#westseed4 {
+  background-color: #C8102E;
+}
+
+#westteam_name4 {
+  font-size: 20px;
+  font-family: 'clippers';
+  color: white;
+} 
+
+#absolute4 {
+  position: absolute;
+  top: 234px;
+  left: 48px;
+}
+
+#num_west_4 {
+  position: absolute;
+  top: 249px;
+  left: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_westteam5 { /*MAVERICKS*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #00538C; /* green :#00471B / yellow : #F9A01B */
+  z-index: 100;
+  border-radius: 6px;
+  /*border: 1px solid #1A1A1A;*/
+}
+
+#westseed5 {
+  background-color: #002B5E;
+}
+
+#westteam_name5 {
+  font-size: 20px;
+  font-family: 'mavericks';
+  color: #B8C4CA;
+} 
+
+#absolute5 {
+  position: absolute;
+  top: 293px;
+  left: 48px;
+}
+
+#num_west_5 {
+  position: absolute;
+  top: 308px;
+  left: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_westteam3 { /*NUGGETS*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #0E2240; /* yellow :#FEC524 / red :#8B2131 / blue :#1D428A*/
+  z-index: 100;
+  border-radius: 6px;
+  /*border: 1px solid #1A1A1A;*/
+}
+
+#westseed3 {
+  background-color: #8B2131;
+}
+
+#westteam_name3 {
+  font-size: 20px;
+  font-family: 'nuggets';
+  color: #FEC524;
+} 
+
+#absolute3 {
+  position: absolute;
+  top: 386px;
+  left: 48px;
+}
+
+#num_west_3 {
+  position: absolute;
+  top: 401px;
+  left: 20px;
+  z-index: 10
+}
+
+
+/***************************************************/
+
+#bloc_westteam6 { /*BLAZERS*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #E03A3E; /* black */
+  z-index: 100;
+  border-radius: 6px;
+  /*border: 1px solid #1A1A1A;*/
+}
+
+#westseed6 {
+  background-color: black;
+}
+
+#westteam_name6 {
+  font-size: 20px;
+  font-family: 'blazers';
+  color: black;
+} 
+
+#absolute6 {
+  position: absolute;
+  top: 445px;
+  left: 48px;
+}
+
+#num_west_6 {
+  position: absolute;
+  top: 460px;
+  left: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_westteam2 { /*SUNS*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #1D1160; /* orange :#E56020 / black / ...*/
+  z-index: 100;
+  border-radius: 6px;
+  /*border: 1px solid #1A1A1A;*/
+}
+
+#westseed2 {
+  background-color: #E56020;
+}
+
+#westteam_name2 {
+  font-size: 20px;
+  font-family: 'suns';
+  color: #E56020;
+} 
+
+#absolute2 {
+  position: absolute;
+  top: 538px;
+  left: 48px;
+}
+
+#num_west_2 {
+  position: absolute;
+  top: 556px;
+  left: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_westteam7 { /*LAKERS*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #552583; /* gold :#FDB927 / black */
+  z-index: 100;
+  border-radius: 6px;
+  /*border: 1px solid #1A1A1A;*/
+}
+
+#westseed7 {
+  background-color: #FDB927;
+}
+
+#westteam_name7 {
+  font-size: 20px;
+  font-family: 'lakers';
+  color: #FDB927;
+} 
+
+#absolute7 {
+  position: absolute;
+  top: 597px;
+  left: 48px;
+}
+
+#num_west_7 {
+  position: absolute;
+  top: 612px;
+  left: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_eastteam1 { /*SIXERS*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #006BB6; /* red :#ED174C / navy : #002B5C / silver : #C4CED4 */
+  z-index: 100;
+  border-radius: 6px;
+}
+
+#eastseed1 {
+  background-color: #ED174C;
+}
+
+#eastteam_name1 {
+  font-size: 20px;
+  font-family: 'sixers';
+  color: white;
+}
+
+#absolute9 {
+  position: absolute;
+  top: 82px;
+  left: 828px;
+}
+
+#num_east_1 {
+  position: absolute;
+  top: 97px;
+  right: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_eastteam8 { /*WIZARDS*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #002B5C; /* red :#E31837 / silver : #C4CED4 */
+  z-index: 100;
+  border-radius: 6px;
+}
+
+#eastseed8 {
+  background-color: #E31837;
+}
+
+#eastteam_name8 {
+  font-size: 20px;
+  font-family: 'wizards';
+  color: #C4CED4;
+}
+
+#absolute10 {
+  position: absolute;
+  top: 141px;
+  left: 828px;
+}
+
+#num_east_8 {
+  position: absolute;
+  top: 156px;
+  right: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_eastteam4 { /*KNICKS*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #006BB6; /* orange :#F58426 / silver : #BEC0C2 / black */
+  z-index: 100;
+  border-radius: 6px;
+}
+
+#eastseed4 {
+  background-color: #F58426;
+}
+
+#eastteam_name4 {
+  font-size: 20px;
+  font-family: 'knicks';
+  color: #BEC0C2;
+}
+
+#absolute11 {
+  position: absolute;
+  top: 234px;
+  left: 828px;
+}
+
+#num_east_4 {
+  position: absolute;
+  top: 249px;
+  right: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_eastteam5 { /*HAWKS*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #E03A3E; /* yellow :#FFD048 / grey : #26282A */
+  z-index: 100;
+  border-radius: 6px;
+}
+
+#eastseed5 {
+  background-color: #FFD048;
+}
+
+#eastteam_name5 {
+  font-size: 20px;
+  font-family: 'hawks';
+  color: #26282A;
+}
+
+#absolute12 {
+  position: absolute;
+  top: 293px;
+  left: 828px;
+}
+
+#num_east_5 {
+  position: absolute;
+  top: 308px;
+  right: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_eastteam3 { /*BUCKS*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #00471B; /* cream :#EEE1C6 / blue : #0077C0 / black */
+  z-index: 100;
+  border-radius: 6px;
+}
+
+#eastseed3 {
+  background-color: #EEE1C6;
+  color: #00471B;
+}
+
+#eastteam_name3 {
+  font-size: 20px;
+  font-family: 'bucks';
+  color: #EEE1C6;
+}
+
+#absolute13 {
+  position: absolute;
+  top: 386px;
+  left: 828px;
+}
+
+#num_east_3 {
+  position: absolute;
+  top: 401px;
+  right: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_eastteam6 { /*HEAT*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #98002E; /* yellow :#F9A01B / black */
+  z-index: 100;
+  border-radius: 6px;
+}
+
+#eastseed6 {
+  background-color: #F9A01B;
+}
+
+#eastteam_name6 {
+  font-size: 20px;
+  font-family: 'heat';
+  color: black;
+}
+
+#absolute14 {
+  position: absolute;
+  top: 445px;
+  left: 828px;
+}
+
+#num_east_6 {
+  position: absolute;
+  top: 460px;
+  right: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_eastteam2 { /*NETS*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: black; /* grey :#90938E / white */
+  z-index: 100;
+  border-radius: 6px;
+}
+
+#eastseed2 {
+  background-color: #90938E;
+  color: black;
+}
+
+#eastteam_name2 {
+  font-size: 20px;
+  font-family: 'nets';
+  color: white;
+}
+
+#absolute15 {
+  position: absolute;
+  top: 538px;
+  left: 828px;
+}
+
+#num_east_2 {
+  position: absolute;
+  top: 556px;
+  right: 20px;
+  z-index: 10
+}
+
+/***************************************************/
+
+#bloc_eastteam7 { /*CELTICS*/
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.8em;
+  font-size: 20px;
+  background-color: #007A33; /* gold :#BA9653 / brown :#963821 / beige :#E59E6D / black */
+  z-index: 100;
+  border-radius: 6px;
+}
+
+#eastseed7 {
+  background-color: #BA9653;
+}
+
+#eastteam_name7 {
+  font-size: 20px;
+  font-family: 'celtics';
+  color: #BA9653;
+}
+
+#absolute16 {
+  position: absolute;
+  top: 597px;
+  left: 828px;
+}
+
+#num_east_7 {
+  position: absolute;
+  top: 612px;
+  right: 20px;
+  z-index: 10
+}
+
