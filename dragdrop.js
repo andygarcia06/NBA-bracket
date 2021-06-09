@@ -54,3 +54,31 @@ const empties = document.querySelectorAll('.empty');
           shuffleParentElement.append(shuffleWithElement);
         }
     }
+
+    // Counter
+
+    // my Variables 
+
+    
+    const possibleValues = [0,1,2,3,4];
+
+
+    // regex input validation
+
+    function numberIsValid(value) {
+        return /^[0-4]$/.test(value);
+    }
+
+    // Event write on gameCounter
+ const inputA = document.getElementsByClassName("gameCounterA");
+
+  inputA.addEventListener('change',(e)=>{
+      console.log(e.target.value)
+  })
+
+
+
+
+
+
+    
